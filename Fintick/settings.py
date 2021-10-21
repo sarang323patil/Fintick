@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-v4(znbv^afi!nwbo40_12$n28ybqv3yst92yg54jp5fgker1^i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','Fintick.com']
+ALLOWED_HOSTS = ['127.0.0.1','finticker.herokuapp.com/']
 
 
 # Application definition
