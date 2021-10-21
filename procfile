@@ -1,1 +1,1 @@
-web: gunicorn Fintick.wsgi --log-file -
+web:gunicorn Fintick.wsgi 
