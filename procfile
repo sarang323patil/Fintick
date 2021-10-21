@@ -1,1 +1,1 @@
-web: gunicorn stockScreener.wsgi 
+web: gunicorn Fintick.wsgi 
