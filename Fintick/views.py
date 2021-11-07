@@ -62,6 +62,7 @@ def getTable(soup, tableHeading):
 
 #  ----- Pages --------------------------------
 
+
 def index(request):
     return render(request, 'index.html')
 

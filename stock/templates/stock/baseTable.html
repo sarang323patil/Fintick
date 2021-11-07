@@ -1,0 +1,41 @@
+<div class="container my-18 mb-8">
+    <div class="alert alert-dark" role="alert">
+        <h2>Balanace Sheet</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    {% for row in profitLossTable|slice:":1" %}
+                    {%for item in row %}
+                    <th scope="col">{{item}}</th>
+                    {%endfor%}
+
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in profitLossTable|slice:"1:13" %}
+                <tr>
+                    {% if forloop.counter0 == 0 %}
+                    <th scope="col">Sales</th>
+                    {% elif forloop.counter0 == 1 %}
+                    <th scope="col">Expense</th>
+                    {% endif %}
+
+                    {%for item in row %}
+                    {% if forloop.counter0 == 0 %}
+                    {% if forloop.parentloop.counter0 > 1 %}
+                    <th scope="col">{{item}}</th>
+                    {% else %}
+                    <td scope="col">{{item}}</td>
+                    {% endif %}
+                    {% else %}
+                    <td scope="col">{{item}}</td>
+                    {% endif %}
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>

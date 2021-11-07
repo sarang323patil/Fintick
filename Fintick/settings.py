@@ -33,12 +33,14 @@ ALLOWED_HOSTS = ['127.0.0.1','finticker.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
+    'stock.apps.StockConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
 ]
 
 MIDDLEWARE = [
